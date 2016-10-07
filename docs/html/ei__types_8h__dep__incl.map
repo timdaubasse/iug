@@ -1,4 +1,5 @@
 <map id="include/ei_types.h" name="include/ei_types.h">
-<area shape="rect" id="node2" href="$ei__event_8h.html" title="Allows the binding and unbinding of callbacks to events. " alt="" coords="5,80,132,107"/>
-<area shape="rect" id="node3" href="$hw__interface_8h.html" title="Low level interface with the graphic hadware. This interface is based on the SDL library. " alt="" coords="157,80,309,107"/>
+<area shape="rect" id="node2" href="$ei__draw_8h.html" title="Graphical primitives to draw lines, polygons, text, and operation of drawing surfaces. " alt="" coords="5,155,128,181"/>
+<area shape="rect" id="node3" href="$hw__interface_8h.html" title="Low level interface with the graphic hadware. This interface is based on the SDL library. " alt="" coords="48,80,200,107"/>
+<area shape="rect" id="node4" href="$ei__event_8h.html" title="Allows the binding and unbinding of callbacks to events. " alt="" coords="225,80,351,107"/>
 </map>

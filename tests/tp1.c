@@ -2,14 +2,12 @@
 
 #include "ei_event.h"
 #include "hw_interface.h"
-#include <stdio.h>
 
 int ei_main(int argc, char** argv)
 {
 	ei_surface_t main_window = NULL;
 	ei_size_t		 main_window_size;
 	ei_event_t event;
-    ei_size_t size;
 
 
 	// Init acces to hardware.
@@ -20,9 +18,6 @@ int ei_main(int argc, char** argv)
 	main_window_size.height	= 480;
 	main_window = hw_create_window(&main_window_size, EI_FALSE);
 
-    //Print the window's size
-    size = hw_surface_get_size(main_window);
-    printf("the size of the window is %d,%d \n",size.height,size.width);
 
 	// Wait for a key press.
 	event.type = ei_ev_none;

@@ -1,0 +1,115 @@
+\hypertarget{ei__draw_8h}{}\section{include/ei\+\_\+draw.h File Reference}
+\label{ei__draw_8h}\index{include/ei\+\_\+draw.\+h@{include/ei\+\_\+draw.\+h}}
+
+
+Graphical primitives to draw lines, polygons, text, and operation of drawing surfaces.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}ei\+\_\+types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}hw\+\_\+interface.\+h\char`\"{}}\\*
+Include dependency graph for ei\+\_\+draw.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{ei__draw_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ei__draw_8h_a7643f2340584df08b11aaa513ce42ec2}{ei\+\_\+draw\+\_\+text} (\hyperlink{hw__interface_8h_ad9970ae727c438faaf09c58c5defb796}{ei\+\_\+surface\+\_\+t} surface, const \hyperlink{structei__point__t}{ei\+\_\+point\+\_\+t} $\ast$where, const char $\ast$text, const \hyperlink{ei__types_8h_a22c8198e4d641e4bc67bb17f9c6bcda7}{ei\+\_\+font\+\_\+t} font, const \hyperlink{structei__color__t}{ei\+\_\+color\+\_\+t} $\ast$color)
+\begin{DoxyCompactList}\small\item\em Draws text by calling \hyperlink{hw__interface_8h_a806521541c5a5a80fbf43105270919e4}{hw\+\_\+text\+\_\+create\+\_\+surface}. \end{DoxyCompactList}\item 
+void \hyperlink{ei__draw_8h_af83e40888694aac25bbb2e2d97a2ec95}{ei\+\_\+fill} (\hyperlink{hw__interface_8h_ad9970ae727c438faaf09c58c5defb796}{ei\+\_\+surface\+\_\+t} surface, const \hyperlink{structei__color__t}{ei\+\_\+color\+\_\+t} $\ast$color, const \hyperlink{ei__types_8h_a383b9af13bd6a0a893096ead3c4d8e28}{ei\+\_\+bool\+\_\+t} use\+\_\+alpha)
+\begin{DoxyCompactList}\small\item\em Fills the surface with the specified color. \end{DoxyCompactList}\item 
+int \hyperlink{ei__draw_8h_aa4c94a99d3a92ec2a5704dda95b87990}{ei\+\_\+copy\+\_\+surface} (\hyperlink{hw__interface_8h_ad9970ae727c438faaf09c58c5defb796}{ei\+\_\+surface\+\_\+t} destination, const \hyperlink{hw__interface_8h_ad9970ae727c438faaf09c58c5defb796}{ei\+\_\+surface\+\_\+t} source, const \hyperlink{structei__point__t}{ei\+\_\+point\+\_\+t} top\+\_\+left, const \hyperlink{ei__types_8h_a383b9af13bd6a0a893096ead3c4d8e28}{ei\+\_\+bool\+\_\+t} use\+\_\+alpha)
+\begin{DoxyCompactList}\small\item\em Copies a surface, or a subpart, to another one. The source and destination area of the copy (either the entire surfaces, or subparts) must have the same size (before clipping). Both the source and destination surfaces must be {\itshape locked} by \hyperlink{hw__interface_8h_a1b9b22f29bb9de0b39ea904fd66251be}{hw\+\_\+surface\+\_\+lock}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Graphical primitives to draw lines, polygons, text, and operation of drawing surfaces. 
+
+\begin{DoxyAuthor}{Author}
+Created by François Bérard on 30.\+12.\+11. Copyright 2011 Ensimag. All rights reserved. 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{ei\+\_\+draw.\+h@{ei\+\_\+draw.\+h}!ei\+\_\+copy\+\_\+surface@{ei\+\_\+copy\+\_\+surface}}
+\index{ei\+\_\+copy\+\_\+surface@{ei\+\_\+copy\+\_\+surface}!ei\+\_\+draw.\+h@{ei\+\_\+draw.\+h}}
+\subsubsection[{\texorpdfstring{ei\+\_\+copy\+\_\+surface(ei\+\_\+surface\+\_\+t destination, const ei\+\_\+surface\+\_\+t source, const ei\+\_\+point\+\_\+t top\+\_\+left, const ei\+\_\+bool\+\_\+t use\+\_\+alpha)}{ei_copy_surface(ei_surface_t destination, const ei_surface_t source, const ei_point_t top_left, const ei_bool_t use_alpha)}}]{\setlength{\rightskip}{0pt plus 5cm}int ei\+\_\+copy\+\_\+surface (
+\begin{DoxyParamCaption}
+\item[{{\bf ei\+\_\+surface\+\_\+t}}]{destination, }
+\item[{const {\bf ei\+\_\+surface\+\_\+t}}]{source, }
+\item[{const {\bf ei\+\_\+point\+\_\+t}}]{top\+\_\+left, }
+\item[{const {\bf ei\+\_\+bool\+\_\+t}}]{use\+\_\+alpha}
+\end{DoxyParamCaption}
+)}\hypertarget{ei__draw_8h_aa4c94a99d3a92ec2a5704dda95b87990}{}\label{ei__draw_8h_aa4c94a99d3a92ec2a5704dda95b87990}
+
+
+Copies a surface, or a subpart, to another one. The source and destination area of the copy (either the entire surfaces, or subparts) must have the same size (before clipping). Both the source and destination surfaces must be {\itshape locked} by \hyperlink{hw__interface_8h_a1b9b22f29bb9de0b39ea904fd66251be}{hw\+\_\+surface\+\_\+lock}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & The surface on which to copy pixels from the source surface. \\
+\hline
+{\em dst\+\_\+rect} & If N\+U\+LL, the entire destination surface is used. If not N\+U\+LL, defines the rectangle on the destination surface where to copy the pixels. \\
+\hline
+{\em source} & The surface from which to copy pixels. \\
+\hline
+{\em src\+\_\+rect} & If N\+U\+LL, the entire source surface is used. If not N\+U\+LL, defines the rectangle on the source surface from which to copy the pixels. \\
+\hline
+{\em use\+\_\+alpha} & If true, the final pixels are a combination of source and destination pixels weighted by the source alpha channel. The transparency of the final pixels is set to opaque. If false, the final pixels are an exact copy of the source pixels, including the alpha channel.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, 1 on failure (different R\+OI size). 
+\end{DoxyReturn}
+\index{ei\+\_\+draw.\+h@{ei\+\_\+draw.\+h}!ei\+\_\+draw\+\_\+text@{ei\+\_\+draw\+\_\+text}}
+\index{ei\+\_\+draw\+\_\+text@{ei\+\_\+draw\+\_\+text}!ei\+\_\+draw.\+h@{ei\+\_\+draw.\+h}}
+\subsubsection[{\texorpdfstring{ei\+\_\+draw\+\_\+text(ei\+\_\+surface\+\_\+t surface, const ei\+\_\+point\+\_\+t $\ast$where, const char $\ast$text, const ei\+\_\+font\+\_\+t font, const ei\+\_\+color\+\_\+t $\ast$color)}{ei_draw_text(ei_surface_t surface, const ei_point_t *where, const char *text, const ei_font_t font, const ei_color_t *color)}}]{\setlength{\rightskip}{0pt plus 5cm}void ei\+\_\+draw\+\_\+text (
+\begin{DoxyParamCaption}
+\item[{{\bf ei\+\_\+surface\+\_\+t}}]{surface, }
+\item[{const {\bf ei\+\_\+point\+\_\+t} $\ast$}]{where, }
+\item[{const char $\ast$}]{text, }
+\item[{const {\bf ei\+\_\+font\+\_\+t}}]{font, }
+\item[{const {\bf ei\+\_\+color\+\_\+t} $\ast$}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{ei__draw_8h_a7643f2340584df08b11aaa513ce42ec2}{}\label{ei__draw_8h_a7643f2340584df08b11aaa513ce42ec2}
+
+
+Draws text by calling \hyperlink{hw__interface_8h_a806521541c5a5a80fbf43105270919e4}{hw\+\_\+text\+\_\+create\+\_\+surface}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surface} & Where to draw the text. The surface must be {\itshape locked} by \hyperlink{hw__interface_8h_a1b9b22f29bb9de0b39ea904fd66251be}{hw\+\_\+surface\+\_\+lock}. \\
+\hline
+{\em where} & Coordinates, in the surface, where to anchor the $\ast$top-\/left corner of the rendered text. \\
+\hline
+{\em text} & The string of the text. Can\textquotesingle{}t be N\+U\+LL. \\
+\hline
+{\em font} & The font used to render the text. If N\+U\+LL, the \hyperlink{ei__types_8h_a722bfa1a8a9a4202fb2d4abce2f06a8c}{ei\+\_\+default\+\_\+font} is used. \\
+\hline
+{\em color} & The text color. Can\textquotesingle{}t be N\+U\+LL. The alpha parameter is not used. \\
+\hline
+\end{DoxyParams}
+\index{ei\+\_\+draw.\+h@{ei\+\_\+draw.\+h}!ei\+\_\+fill@{ei\+\_\+fill}}
+\index{ei\+\_\+fill@{ei\+\_\+fill}!ei\+\_\+draw.\+h@{ei\+\_\+draw.\+h}}
+\subsubsection[{\texorpdfstring{ei\+\_\+fill(ei\+\_\+surface\+\_\+t surface, const ei\+\_\+color\+\_\+t $\ast$color, const ei\+\_\+bool\+\_\+t use\+\_\+alpha)}{ei_fill(ei_surface_t surface, const ei_color_t *color, const ei_bool_t use_alpha)}}]{\setlength{\rightskip}{0pt plus 5cm}void ei\+\_\+fill (
+\begin{DoxyParamCaption}
+\item[{{\bf ei\+\_\+surface\+\_\+t}}]{surface, }
+\item[{const {\bf ei\+\_\+color\+\_\+t} $\ast$}]{color, }
+\item[{const {\bf ei\+\_\+bool\+\_\+t}}]{use\+\_\+alpha}
+\end{DoxyParamCaption}
+)}\hypertarget{ei__draw_8h_af83e40888694aac25bbb2e2d97a2ec95}{}\label{ei__draw_8h_af83e40888694aac25bbb2e2d97a2ec95}
+
+
+Fills the surface with the specified color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em surface} & The surface to be filled. The surface must be {\itshape locked} by \hyperlink{hw__interface_8h_a1b9b22f29bb9de0b39ea904fd66251be}{hw\+\_\+surface\+\_\+lock}. \\
+\hline
+{\em color} & The color used to fill the surface. If N\+U\+LL, it means that the caller want it painted black (opaque, ei\+\_\+font\+\_\+default\+\_\+color). \\
+\hline
+\end{DoxyParams}

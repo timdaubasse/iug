@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 2.8)
 
-project(ProjetTechnoL3TP1 C)
+project(ProjetTechnoL3TP3 C)
 enable_language(C CXX)
 
 # The project version number.
@@ -42,8 +42,15 @@ set(include_files
     include/hw_interface.h
     include/ei_types.h
     include/ei_event.h
+    include/ei_draw.h
     )
 add_custom_target(headers SOURCES ${include_files})
+
+# target to generate libei
+set(EI_SRC
+        src/ei_draw.c
+        )
+add_library(ei ${EI_SRC})
 
 # target to generate the test set
 add_subdirectory(tests)
