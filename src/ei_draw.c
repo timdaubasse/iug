@@ -20,7 +20,18 @@ static inline ei_color_t alpha_blend(const ei_color_t in_pixel, const ei_color_t
 
 void ei_draw_line(ei_surface_t surface, const ei_point_t start,
                   const ei_point_t end, const ei_color_t color) {
-    float m = (end.y - start.y) / (end.x - start.x);
+    int x = start.x+1;
+    int y = start.y+1;
+    int e = start.x-end.x;
+    ei_point_t point;
+    point.x=x;
+    point.y=y;
+
+    while( x<= end.x ){
+        hw_put_pixel(surface,point,color);
+    }
+
+
 
     /* TO BE COMPLETED */
  }
