@@ -1,0 +1,178 @@
+\hypertarget{ei__types_8h}{}\section{include/ei\+\_\+types.h File Reference}
+\label{ei__types_8h}\index{include/ei\+\_\+types.\+h@{include/ei\+\_\+types.\+h}}
+
+
+Type, constant, and global definitions for the ei library.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+Include dependency graph for ei\+\_\+types.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{ei__types_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{ei__types_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structei__point__t}{ei\+\_\+point\+\_\+t}
+\begin{DoxyCompactList}\small\item\em A 2-\/D point with integer coordinates. \end{DoxyCompactList}\item 
+struct \hyperlink{structei__size__t}{ei\+\_\+size\+\_\+t}
+\begin{DoxyCompactList}\small\item\em A 2-\/D size with integer dimensions. \end{DoxyCompactList}\item 
+struct \hyperlink{structei__rect__t}{ei\+\_\+rect\+\_\+t}
+\begin{DoxyCompactList}\small\item\em A rectangle defined by its top-\/left corner, and its size. \end{DoxyCompactList}\item 
+struct \hyperlink{structei__linked__rect__t}{ei\+\_\+linked\+\_\+rect\+\_\+t}
+\begin{DoxyCompactList}\small\item\em A rectangle plus a pointer to create a linked list. \end{DoxyCompactList}\item 
+struct \hyperlink{structei__linked__point__t}{ei\+\_\+linked\+\_\+point\+\_\+t}
+\begin{DoxyCompactList}\small\item\em A point plus a pointer to create a linked list. \end{DoxyCompactList}\item 
+struct \hyperlink{structei__color__t}{ei\+\_\+color\+\_\+t}
+\begin{DoxyCompactList}\small\item\em A color with transparency. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structei__linked__rect__t}{ei\+\_\+linked\+\_\+rect\+\_\+t} \hyperlink{ei__types_8h_a16241a27b7fb48452a6386e58494cc9a}{ei\+\_\+linked\+\_\+rect\+\_\+t}\hypertarget{ei__types_8h_a16241a27b7fb48452a6386e58494cc9a}{}\label{ei__types_8h_a16241a27b7fb48452a6386e58494cc9a}
+
+\begin{DoxyCompactList}\small\item\em A rectangle plus a pointer to create a linked list. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structei__linked__point__t}{ei\+\_\+linked\+\_\+point\+\_\+t} \hyperlink{ei__types_8h_aaa3f2e86217750f9c3c734bde1ffa41f}{ei\+\_\+linked\+\_\+point\+\_\+t}\hypertarget{ei__types_8h_aaa3f2e86217750f9c3c734bde1ffa41f}{}\label{ei__types_8h_aaa3f2e86217750f9c3c734bde1ffa41f}
+
+\begin{DoxyCompactList}\small\item\em A point plus a pointer to create a linked list. \end{DoxyCompactList}\item 
+typedef void $\ast$ \hyperlink{ei__types_8h_a22c8198e4d641e4bc67bb17f9c6bcda7}{ei\+\_\+font\+\_\+t}
+\begin{DoxyCompactList}\small\item\em An opaque type for handling fonts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ei__types_8h_a383b9af13bd6a0a893096ead3c4d8e28}{ei\+\_\+bool\+\_\+t} \{ {\bfseries E\+I\+\_\+\+F\+A\+L\+SE} = 0, 
+{\bfseries E\+I\+\_\+\+T\+R\+UE} = 1
+ \}\hypertarget{ei__types_8h_a383b9af13bd6a0a893096ead3c4d8e28}{}\label{ei__types_8h_a383b9af13bd6a0a893096ead3c4d8e28}
+\begin{DoxyCompactList}\small\item\em The boolean type used in the library. \end{DoxyCompactList}
+\item 
+enum \hyperlink{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450}{ei\+\_\+anchor\+\_\+t} \{ \\*
+\hyperlink{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450a00688941d6793b4165bbc56edb70646a}{ei\+\_\+anc\+\_\+none} = 0, 
+\hyperlink{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450a5704b2469014b3e93fbdb0b297ed92b0}{ei\+\_\+anc\+\_\+center}, 
+\hyperlink{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450abb9d5dcbb25572cab716280dbe72014d}{ei\+\_\+anc\+\_\+north}, 
+\hyperlink{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450af4ba72d1581a2e133eaeb6c00c912cff}{ei\+\_\+anc\+\_\+northeast}, 
+\\*
+\hyperlink{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450ac60193e3f00916df2272dee7b33c1143}{ei\+\_\+anc\+\_\+east}, 
+\hyperlink{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450ac6ab86aaa5a6f70cf4a49ed317686c7e}{ei\+\_\+anc\+\_\+southeast}, 
+\hyperlink{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450a912ba0dd51dde60a610fbce211cf1b35}{ei\+\_\+anc\+\_\+south}, 
+\hyperlink{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450a200959a22ba17a83310a97570f62f392}{ei\+\_\+anc\+\_\+southwest}, 
+\\*
+\hyperlink{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450af260d86ff3940d57139f0f8de9488512}{ei\+\_\+anc\+\_\+west}, 
+\hyperlink{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450a696c63e5bb8cab534cdf59d9a97f836b}{ei\+\_\+anc\+\_\+northwest}
+ \}\begin{DoxyCompactList}\small\item\em Identifies one particular point of a rectangle. \end{DoxyCompactList}
+\item 
+enum \hyperlink{ei__types_8h_aa79a32b1d8ece0e44cfa394e870b270b}{ei\+\_\+relief\+\_\+t} \{ \hyperlink{ei__types_8h_aa79a32b1d8ece0e44cfa394e870b270ba105222bc995071e84bce027c90a59b62}{ei\+\_\+relief\+\_\+none} = 0, 
+\hyperlink{ei__types_8h_aa79a32b1d8ece0e44cfa394e870b270bac1e7867185743599ffcceb42784bd4e3}{ei\+\_\+relief\+\_\+raised}, 
+\hyperlink{ei__types_8h_aa79a32b1d8ece0e44cfa394e870b270ba227a7ad58efd20f955450357c0bd4b36}{ei\+\_\+relief\+\_\+sunken}
+ \}\begin{DoxyCompactList}\small\item\em Type of relief. \end{DoxyCompactList}
+\item 
+enum \hyperlink{ei__types_8h_ab5d9ff46ba9b2c9fa6d6fbd2594c6439}{ei\+\_\+axis\+\_\+set\+\_\+t} \{ \hyperlink{ei__types_8h_ab5d9ff46ba9b2c9fa6d6fbd2594c6439ae34dee3f21cd76dae607d8334d3bab50}{ei\+\_\+axis\+\_\+none} = 0, 
+\hyperlink{ei__types_8h_ab5d9ff46ba9b2c9fa6d6fbd2594c6439a7a26f78919e1c485e2270b9f5a7271bf}{ei\+\_\+axis\+\_\+x}, 
+\hyperlink{ei__types_8h_ab5d9ff46ba9b2c9fa6d6fbd2594c6439af3316aa4c9c58d8e451a9a1c8a72e38d}{ei\+\_\+axis\+\_\+y}, 
+\hyperlink{ei__types_8h_ab5d9ff46ba9b2c9fa6d6fbd2594c6439a6e6ffa2a8d854858429d6f54d94919a9}{ei\+\_\+axis\+\_\+both}
+ \}\begin{DoxyCompactList}\small\item\em Set of axis. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ei__types_8h_a22c8198e4d641e4bc67bb17f9c6bcda7}{ei\+\_\+font\+\_\+t} \hyperlink{ei__types_8h_a722bfa1a8a9a4202fb2d4abce2f06a8c}{ei\+\_\+default\+\_\+font}\hypertarget{ei__types_8h_a722bfa1a8a9a4202fb2d4abce2f06a8c}{}\label{ei__types_8h_a722bfa1a8a9a4202fb2d4abce2f06a8c}
+
+\begin{DoxyCompactList}\small\item\em The default font used in widgets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Type, constant, and global definitions for the ei library. 
+
+Created by François Bérard on 18.\+12.\+11. Copyright 2011 Ensimag. All rights reserved. 
+
+\subsection{Typedef Documentation}
+\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+font\+\_\+t@{ei\+\_\+font\+\_\+t}}
+\index{ei\+\_\+font\+\_\+t@{ei\+\_\+font\+\_\+t}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}
+\subsubsection[{\texorpdfstring{ei\+\_\+font\+\_\+t}{ei_font_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ {\bf ei\+\_\+font\+\_\+t}}\hypertarget{ei__types_8h_a22c8198e4d641e4bc67bb17f9c6bcda7}{}\label{ei__types_8h_a22c8198e4d641e4bc67bb17f9c6bcda7}
+
+
+An opaque type for handling fonts. 
+
+Fonts are created by calling \hyperlink{hw__interface_8h_a9c6b86bcbcdd0b3e590e1e33fcf893d7}{hw\+\_\+text\+\_\+font\+\_\+create} and released by calling \hyperlink{hw__interface_8h_a2ac46d37db4c40adc10e3afb137f9f02}{hw\+\_\+text\+\_\+font\+\_\+free}. 
+
+\subsection{Enumeration Type Documentation}
+\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+anchor\+\_\+t@{ei\+\_\+anchor\+\_\+t}}
+\index{ei\+\_\+anchor\+\_\+t@{ei\+\_\+anchor\+\_\+t}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}
+\subsubsection[{\texorpdfstring{ei\+\_\+anchor\+\_\+t}{ei_anchor_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ei\+\_\+anchor\+\_\+t}}\hypertarget{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450}{}\label{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450}
+
+
+Identifies one particular point of a rectangle. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{ei\+\_\+anc\+\_\+none@{ei\+\_\+anc\+\_\+none}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+anc\+\_\+none@{ei\+\_\+anc\+\_\+none}}\item[{\em 
+ei\+\_\+anc\+\_\+none\hypertarget{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450a00688941d6793b4165bbc56edb70646a}{}\label{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450a00688941d6793b4165bbc56edb70646a}
+}]No anchor defined. \index{ei\+\_\+anc\+\_\+center@{ei\+\_\+anc\+\_\+center}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+anc\+\_\+center@{ei\+\_\+anc\+\_\+center}}\item[{\em 
+ei\+\_\+anc\+\_\+center\hypertarget{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450a5704b2469014b3e93fbdb0b297ed92b0}{}\label{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450a5704b2469014b3e93fbdb0b297ed92b0}
+}]Anchor in the center. \index{ei\+\_\+anc\+\_\+north@{ei\+\_\+anc\+\_\+north}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+anc\+\_\+north@{ei\+\_\+anc\+\_\+north}}\item[{\em 
+ei\+\_\+anc\+\_\+north\hypertarget{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450abb9d5dcbb25572cab716280dbe72014d}{}\label{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450abb9d5dcbb25572cab716280dbe72014d}
+}]Anchor on the top side, centered horizontally. \index{ei\+\_\+anc\+\_\+northeast@{ei\+\_\+anc\+\_\+northeast}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+anc\+\_\+northeast@{ei\+\_\+anc\+\_\+northeast}}\item[{\em 
+ei\+\_\+anc\+\_\+northeast\hypertarget{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450af4ba72d1581a2e133eaeb6c00c912cff}{}\label{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450af4ba72d1581a2e133eaeb6c00c912cff}
+}]Anchor on the top-\/right corner. \index{ei\+\_\+anc\+\_\+east@{ei\+\_\+anc\+\_\+east}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+anc\+\_\+east@{ei\+\_\+anc\+\_\+east}}\item[{\em 
+ei\+\_\+anc\+\_\+east\hypertarget{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450ac60193e3f00916df2272dee7b33c1143}{}\label{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450ac60193e3f00916df2272dee7b33c1143}
+}]Anchor on the right side, centered vertically. \index{ei\+\_\+anc\+\_\+southeast@{ei\+\_\+anc\+\_\+southeast}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+anc\+\_\+southeast@{ei\+\_\+anc\+\_\+southeast}}\item[{\em 
+ei\+\_\+anc\+\_\+southeast\hypertarget{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450ac6ab86aaa5a6f70cf4a49ed317686c7e}{}\label{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450ac6ab86aaa5a6f70cf4a49ed317686c7e}
+}]Anchor on the bottom-\/right corner. \index{ei\+\_\+anc\+\_\+south@{ei\+\_\+anc\+\_\+south}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+anc\+\_\+south@{ei\+\_\+anc\+\_\+south}}\item[{\em 
+ei\+\_\+anc\+\_\+south\hypertarget{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450a912ba0dd51dde60a610fbce211cf1b35}{}\label{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450a912ba0dd51dde60a610fbce211cf1b35}
+}]Anchor on the bottom side, centered horizontally. \index{ei\+\_\+anc\+\_\+southwest@{ei\+\_\+anc\+\_\+southwest}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+anc\+\_\+southwest@{ei\+\_\+anc\+\_\+southwest}}\item[{\em 
+ei\+\_\+anc\+\_\+southwest\hypertarget{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450a200959a22ba17a83310a97570f62f392}{}\label{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450a200959a22ba17a83310a97570f62f392}
+}]Anchor on the bottom-\/left corner. \index{ei\+\_\+anc\+\_\+west@{ei\+\_\+anc\+\_\+west}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+anc\+\_\+west@{ei\+\_\+anc\+\_\+west}}\item[{\em 
+ei\+\_\+anc\+\_\+west\hypertarget{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450af260d86ff3940d57139f0f8de9488512}{}\label{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450af260d86ff3940d57139f0f8de9488512}
+}]Anchor on the left side, centered vertically. \index{ei\+\_\+anc\+\_\+northwest@{ei\+\_\+anc\+\_\+northwest}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+anc\+\_\+northwest@{ei\+\_\+anc\+\_\+northwest}}\item[{\em 
+ei\+\_\+anc\+\_\+northwest\hypertarget{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450a696c63e5bb8cab534cdf59d9a97f836b}{}\label{ei__types_8h_a3852c963af609d31d7cfcff79c4c8450a696c63e5bb8cab534cdf59d9a97f836b}
+}]Anchor on the top-\/left corner. \end{description}
+\end{Desc}
+\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+axis\+\_\+set\+\_\+t@{ei\+\_\+axis\+\_\+set\+\_\+t}}
+\index{ei\+\_\+axis\+\_\+set\+\_\+t@{ei\+\_\+axis\+\_\+set\+\_\+t}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}
+\subsubsection[{\texorpdfstring{ei\+\_\+axis\+\_\+set\+\_\+t}{ei_axis_set_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ei\+\_\+axis\+\_\+set\+\_\+t}}\hypertarget{ei__types_8h_ab5d9ff46ba9b2c9fa6d6fbd2594c6439}{}\label{ei__types_8h_ab5d9ff46ba9b2c9fa6d6fbd2594c6439}
+
+
+Set of axis. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{ei\+\_\+axis\+\_\+none@{ei\+\_\+axis\+\_\+none}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+axis\+\_\+none@{ei\+\_\+axis\+\_\+none}}\item[{\em 
+ei\+\_\+axis\+\_\+none\hypertarget{ei__types_8h_ab5d9ff46ba9b2c9fa6d6fbd2594c6439ae34dee3f21cd76dae607d8334d3bab50}{}\label{ei__types_8h_ab5d9ff46ba9b2c9fa6d6fbd2594c6439ae34dee3f21cd76dae607d8334d3bab50}
+}]No axis. \index{ei\+\_\+axis\+\_\+x@{ei\+\_\+axis\+\_\+x}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+axis\+\_\+x@{ei\+\_\+axis\+\_\+x}}\item[{\em 
+ei\+\_\+axis\+\_\+x\hypertarget{ei__types_8h_ab5d9ff46ba9b2c9fa6d6fbd2594c6439a7a26f78919e1c485e2270b9f5a7271bf}{}\label{ei__types_8h_ab5d9ff46ba9b2c9fa6d6fbd2594c6439a7a26f78919e1c485e2270b9f5a7271bf}
+}]Horizontal axis. \index{ei\+\_\+axis\+\_\+y@{ei\+\_\+axis\+\_\+y}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+axis\+\_\+y@{ei\+\_\+axis\+\_\+y}}\item[{\em 
+ei\+\_\+axis\+\_\+y\hypertarget{ei__types_8h_ab5d9ff46ba9b2c9fa6d6fbd2594c6439af3316aa4c9c58d8e451a9a1c8a72e38d}{}\label{ei__types_8h_ab5d9ff46ba9b2c9fa6d6fbd2594c6439af3316aa4c9c58d8e451a9a1c8a72e38d}
+}]Vertical axis. \index{ei\+\_\+axis\+\_\+both@{ei\+\_\+axis\+\_\+both}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+axis\+\_\+both@{ei\+\_\+axis\+\_\+both}}\item[{\em 
+ei\+\_\+axis\+\_\+both\hypertarget{ei__types_8h_ab5d9ff46ba9b2c9fa6d6fbd2594c6439a6e6ffa2a8d854858429d6f54d94919a9}{}\label{ei__types_8h_ab5d9ff46ba9b2c9fa6d6fbd2594c6439a6e6ffa2a8d854858429d6f54d94919a9}
+}]Both horizontal and vertical axis. \end{description}
+\end{Desc}
+\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+relief\+\_\+t@{ei\+\_\+relief\+\_\+t}}
+\index{ei\+\_\+relief\+\_\+t@{ei\+\_\+relief\+\_\+t}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}
+\subsubsection[{\texorpdfstring{ei\+\_\+relief\+\_\+t}{ei_relief_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ei\+\_\+relief\+\_\+t}}\hypertarget{ei__types_8h_aa79a32b1d8ece0e44cfa394e870b270b}{}\label{ei__types_8h_aa79a32b1d8ece0e44cfa394e870b270b}
+
+
+Type of relief. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{ei\+\_\+relief\+\_\+none@{ei\+\_\+relief\+\_\+none}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+relief\+\_\+none@{ei\+\_\+relief\+\_\+none}}\item[{\em 
+ei\+\_\+relief\+\_\+none\hypertarget{ei__types_8h_aa79a32b1d8ece0e44cfa394e870b270ba105222bc995071e84bce027c90a59b62}{}\label{ei__types_8h_aa79a32b1d8ece0e44cfa394e870b270ba105222bc995071e84bce027c90a59b62}
+}]No relief (i.\+e. flat). \index{ei\+\_\+relief\+\_\+raised@{ei\+\_\+relief\+\_\+raised}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+relief\+\_\+raised@{ei\+\_\+relief\+\_\+raised}}\item[{\em 
+ei\+\_\+relief\+\_\+raised\hypertarget{ei__types_8h_aa79a32b1d8ece0e44cfa394e870b270bac1e7867185743599ffcceb42784bd4e3}{}\label{ei__types_8h_aa79a32b1d8ece0e44cfa394e870b270bac1e7867185743599ffcceb42784bd4e3}
+}]Above the screen. \index{ei\+\_\+relief\+\_\+sunken@{ei\+\_\+relief\+\_\+sunken}!ei\+\_\+types.\+h@{ei\+\_\+types.\+h}}\index{ei\+\_\+types.\+h@{ei\+\_\+types.\+h}!ei\+\_\+relief\+\_\+sunken@{ei\+\_\+relief\+\_\+sunken}}\item[{\em 
+ei\+\_\+relief\+\_\+sunken\hypertarget{ei__types_8h_aa79a32b1d8ece0e44cfa394e870b270ba227a7ad58efd20f955450357c0bd4b36}{}\label{ei__types_8h_aa79a32b1d8ece0e44cfa394e870b270ba227a7ad58efd20f955450357c0bd4b36}
+}]Inside the screen. \end{description}
+\end{Desc}
