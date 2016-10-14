@@ -83,7 +83,11 @@ int ei_draw_polyline(ei_surface_t surface,
         return 1;
     }
 
-    /* TO BE COMPLETED */
+    while(first_point+1 != NULL){
+      ei_draw_line(surface,first_point,first_point+1);
+      first_point++;
+    }
+    
 
     return 0;
 }
