@@ -76,8 +76,9 @@ int ei_main(int argc, char** argv){
 	rd_point->point.y=180;
 	first_point->next=nd_point;
 	nd_point->next=rd_point;
+	rd_point->next=NULL;
 
-	ei_draw_polyline(surface,first_point,c)
+	ei_draw_polyline(main_window,first_point,c);
 	
 	
 
