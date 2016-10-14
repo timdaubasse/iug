@@ -82,12 +82,15 @@ int ei_draw_polyline(ei_surface_t surface,
         fprintf(stderr, " no points for the polyline\n;");
         return 1;
     }
-
-    while(first_point+1 != NULL){
-      ei_draw_line(surface,first_point,first_point+1);
-      first_point++;
-    }
     
+    do{
+       point.x=first_point->point.x;
+       point.y=first_point->point.y;
+       first_point->next;
+       
+       ei_draw_line(surface,point,first_point->point,color);
+       
+    }while( first_point =! '\0');
 
     return 0;
 }
