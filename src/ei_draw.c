@@ -20,20 +20,55 @@ static inline ei_color_t alpha_blend(const ei_color_t in_pixel, const ei_color_t
 
 void ei_draw_line(ei_surface_t surface, const ei_point_t start,
                   const ei_point_t end, const ei_color_t color) {
-    int x = start.x+1;
-    int y = start.y+1;
-    int e = start.x-end.x;
-    ei_point_t point;
-    point.x=x;
-    point.y=y;
-
-    while( x<= end.x ){
-        hw_put_pixel(surface,point,color);
+    int e, m;
+    ei_point_t p, sp, ep;
+    if(start.x > end.x){
+        sp.x = end.x, sp.y = end.y;
+        ep.x = start.x, ep.y = start.y;
+    }
+    else{
+        sp.x = start.x, sp.y = start.y;
+        ep.x = end.x, ep.y = end.y;
     }
 
-
-
-    /* TO BE COMPLETED */
+    p.x = sp.x, p.y = sp.y;
+    if(ep.x - sp.x >= (ep.y - sp.y > 0 ? ep.y - sp.y : sp.y - ep.y)){
+        e = sp.x - ep.x;
+        while(p.x <= ep.x){
+            hw_put_pixel(surface, p, color);
+            p.x++;
+            if(ep.y > sp.y){
+                e += 2 * (ep.y - sp.y);
+                if(e >= 0){
+                    p.y++;
+                    e -= 2 * (ep.x - sp.x);
+                }
+            }
+            else{
+                e -= 2 * (ep.y - sp.y);
+                if(e <= 0){
+                    p.y--;
+                    e -= 2 * (ep.x - sp.x);
+                }
+            }
+        }
+    }
+    else{
+        e = - sp.y + ep.y;
+        while(p.y <= ep.y){
+            hw_put_pixel(surface, p, color);
+            p.y++;
+            e -= 2 * (ep.y - sp.y);
+            if(e <= 0 && ep.x > sp.x){
+                p.x++;
+                e += 2 * (ep.y - sp.y);
+            }
+            else if(e >= 0 && ep.x < sp.x){
+                p.x--;
+                e += 2 * (ep.y - sp.y);
+            }
+        }
+    }
  }
 
 
