@@ -86,15 +86,22 @@ int ei_draw_polyline(ei_surface_t surface,
                      const ei_linked_point_t* first_point,
                      const ei_color_t color)
 {
-
-    if (first_point == NULL) {
-        fprintf(stderr, " no points for the polyline\n;");
-        return 1;
-    }
-
-    /* TO BE COMPLETED */
-
-    return 0;
+  ei_point_t point;
+  if (first_point == NULL) {
+      fprintf(stderr, " no points for the polyline\n;");
+      return 1;
+  }
+    
+  do{
+    point.x=first_point->point.x;
+    point.y=first_point->point.y;
+    first_point->next;
+    
+    ei_draw_line(surface,point,first_point->point,color);
+    
+  }while( first_point =! NULL);
+  
+  return 0;
 }
 
 

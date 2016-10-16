@@ -59,6 +59,21 @@ int ei_main(int argc, char** argv){
     ei_draw_line(main_window, start, end, c);
     hw_surface_unlock(main_window);
 
+/*	ei_linked_point_t* first_point;
+	ei_linked_point_t* nd_point;
+	ei_linked_point_t* rd_point;
+	first_point->point.x=50;
+	first_point->point.y=100;	
+	nd_point->point.x=150;
+	nd_point->point.y=100;
+	rd_point->point.x=150;
+	rd_point->point.y=180;
+	first_point->next=nd_point;
+	nd_point->next=rd_point;
+	rd_point->next=NULL;
+
+	ei_draw_polyline(main_window,first_point,c);*/
+
     hw_surface_update_rects(NULL);
 
     // Wait for a key press.
