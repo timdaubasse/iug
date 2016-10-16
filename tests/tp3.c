@@ -7,63 +7,69 @@
 #include "hw_interface.h"
 
 int ei_main(int argc, char** argv){
-	ei_surface_t main_window = NULL;
-	ei_size_t		 main_window_size;
-	ei_event_t event;
+    ei_surface_t main_window = NULL;
+    ei_size_t		 main_window_size;
+    ei_event_t event;
 
-	ei_point_t start, end;
-	ei_color_t c;
+    ei_point_t start, end;
+    ei_color_t c;
 
-	// Init acces to hardware.
-	hw_init();
+    // Init acces to hardware.
+    hw_init();
 
-	// Create the main window.
-	main_window_size.width	= 640;
-	main_window_size.height	= 480;
-	main_window = hw_create_window(&main_window_size, EI_FALSE);
+    // Create the main window.
+    main_window_size.width	= 640;
+    main_window_size.height	= 480;
+    main_window = hw_create_window(&main_window_size, EI_FALSE);
 
-	c.red = 0xff, c.green = 0xff, c.blue = 0xff, c.alpha = 0xff;
-	start.x = 320, start.y = 240;
-	hw_surface_lock(main_window);
-	ei_fill(main_window, &c, EI_FALSE);
-	c.red = 0x00, c.green = 0x00, c.blue = 0x00, c.alpha = 0x00;
-	end.x = 220, end.y = 240;
-	ei_draw_line(main_window, start, end, c);
-	end.x = 220, end.y = 190;
-	ei_draw_line(main_window, start, end, c);
-	end.x = 220, end.y = 140;
-	ei_draw_line(main_window, start, end, c);
-	end.x = 270, end.y = 140;
-	//ei_draw_line(main_window, start, end, c);
-	end.x = 320, end.y = 140;
-	//ei_draw_line(main_window, start, end, c);
-	end.x = 370, end.y = 140;
-	//ei_draw_line(main_window, start, end, c);
-	end.x = 420, end.y = 140;
-	//ei_draw_line(main_window, start, end, c);
-	end.x = 420, end.y = 190;
-	ei_draw_line(main_window, start, end, c);
-	end.x = 420, end.y = 240;
-	ei_draw_line(main_window, start, end, c);
-	end.x = 420, end.y = 290;
-	ei_draw_line(main_window, start, end, c);
-	end.x = 420, end.y = 340;
-	ei_draw_line(main_window, start, end, c);
-	end.x = 370, end.y = 340;
-	//ei_draw_line(main_window, start, end, c);
-	hw_surface_unlock(main_window);
+    c.red = 0xff, c.green = 0xff, c.blue = 0xff, c.alpha = 0xff;
+    start.x = 320, start.y = 240;
+    hw_surface_lock(main_window);
+    ei_fill(main_window, &c, EI_FALSE);
+    c.red = 0x00, c.green = 0x00, c.blue = 0x00, c.alpha = 0x00;
+    end.x = 270, end.y = 340;
+    ei_draw_line(main_window, start, end, c);
+    end.x = 220, end.y = 340;
+    ei_draw_line(main_window, start, end, c);
+    end.x = 220, end.y = 290;
+    ei_draw_line(main_window, start, end, c);
+    end.x = 220, end.y = 240;
+    ei_draw_line(main_window, start, end, c);
+    end.x = 220, end.y = 190;
+    ei_draw_line(main_window, start, end, c);
+    end.x = 220, end.y = 140;
+    ei_draw_line(main_window, start, end, c);
+    end.x = 270, end.y = 140;
+    ei_draw_line(main_window, start, end, c);
+    end.x = 320, end.y = 140;
+    ei_draw_line(main_window, start, end, c);
+    end.x = 370, end.y = 140;
+    ei_draw_line(main_window, start, end, c);
+    end.x = 420, end.y = 140;
+    ei_draw_line(main_window, start, end, c);
+    end.x = 420, end.y = 190;
+    ei_draw_line(main_window, start, end, c);
+    end.x = 420, end.y = 240;
+    ei_draw_line(main_window, start, end, c);
+    end.x = 420, end.y = 290;
+    ei_draw_line(main_window, start, end, c);
+    end.x = 420, end.y = 340;
+    ei_draw_line(main_window, start, end, c);
+    end.x = 370, end.y = 340;
+    ei_draw_line(main_window, start, end, c);
+    hw_surface_unlock(main_window);
 
-	hw_surface_update_rects(NULL);
+    hw_surface_update_rects(NULL);
 
-	// Wait for a key press.
-	event.type = ei_ev_none;
-	while (event.type != ei_ev_keydown) {
-		hw_event_wait_next(&event);
-	}
+    // Wait for a key press.
+    event.type = ei_ev_none;
+    while (event.type != ei_ev_keydown) {
+        hw_event_wait_next(&event);
+    }
 
-	// Free hardware resources.
-	hw_quit();
+    // Free hardware resources.
+    hw_quit();
 
-	// Terminate program with no error code.
-	return 0;
+    // Terminate program with no error code.
+    return 0;
 }

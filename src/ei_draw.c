@@ -32,12 +32,13 @@ void ei_draw_line(ei_surface_t surface, const ei_point_t start,
     }
 
     p.x = sp.x, p.y = sp.y;
-    if(ep.x - sp.x >= (ep.y - sp.y > 0 ? ep.y - sp.y : sp.y - ep.y)){
+    if(ep.x - sp.x >= (ep.y - sp.y > 0 ? ep.y - sp.y : sp.y - ep.y)){//si coeff <= 1
+        printf("yes\n");//TODO DELETEME
         e = sp.x - ep.x;
         while(p.x <= ep.x){
             hw_put_pixel(surface, p, color);
             p.x++;
-            if(ep.y > sp.y){
+            if(ep.y >= sp.y){
                 e += 2 * (ep.y - sp.y);
                 if(e >= 0){
                     p.y++;
@@ -46,7 +47,7 @@ void ei_draw_line(ei_surface_t surface, const ei_point_t start,
             }
             else{
                 e -= 2 * (ep.y - sp.y);
-                if(e <= 0){
+                if(e >= 0){
                     p.y--;
                     e -= 2 * (ep.x - sp.x);
                 }
@@ -54,18 +55,26 @@ void ei_draw_line(ei_surface_t surface, const ei_point_t start,
         }
     }
     else{
-        e = - sp.y + ep.y;
-        while(p.y <= ep.y){
+        printf("no  %d  %d\n", ep.x, ep.y);//TODO DELETEME
+        e = sp.y - ep.y;
+        while(p.x <= ep.x){//TODO changeme
+            printf("SWEG %d  %d\n", p.x, p.y);
             hw_put_pixel(surface, p, color);
-            p.y++;
-            e -= 2 * (ep.y - sp.y);
-            if(e <= 0 && ep.x > sp.x){
-                p.x++;
-                e += 2 * (ep.y - sp.y);
+            if(ep.y >= sp.y){
+                p.y++;
+                e += 2 * (ep.x - sp.x);
+                if(e >= 0){
+                    p.x++;
+                    e -= 2 * (ep.y - sp.y);
+                }
             }
-            else if(e >= 0 && ep.x < sp.x){
-                p.x--;
-                e += 2 * (ep.y - sp.y);
+            else{
+                p.y--;
+                e += 2 * (ep.x - sp.x);
+                if(e >= 0){
+                    p.x++;
+                    e += 2 * (ep.y - sp.y);
+                }
             }
         }
     }

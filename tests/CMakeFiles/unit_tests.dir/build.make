@@ -60,15 +60,15 @@ include tests/CMakeFiles/unit_tests.dir/flags.make
 tests/CMakeFiles/unit_tests.dir/unit_tests.cpp.o: tests/CMakeFiles/unit_tests.dir/flags.make
 tests/CMakeFiles/unit_tests.dir/unit_tests.cpp.o: tests/unit_tests.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/net/cremi/chapellegrini/ProjetTech/iug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/unit_tests.dir/unit_tests.cpp.o"
-	cd /net/cremi/chapellegrini/ProjetTech/iug/tests && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/unit_tests.cpp.o -c /net/cremi/chapellegrini/ProjetTech/iug/tests/unit_tests.cpp
+	cd /net/cremi/chapellegrini/ProjetTech/iug/tests && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/unit_tests.cpp.o -c /net/cremi/chapellegrini/ProjetTech/iug/tests/unit_tests.cpp
 
 tests/CMakeFiles/unit_tests.dir/unit_tests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unit_tests.dir/unit_tests.cpp.i"
-	cd /net/cremi/chapellegrini/ProjetTech/iug/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /net/cremi/chapellegrini/ProjetTech/iug/tests/unit_tests.cpp > CMakeFiles/unit_tests.dir/unit_tests.cpp.i
+	cd /net/cremi/chapellegrini/ProjetTech/iug/tests && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /net/cremi/chapellegrini/ProjetTech/iug/tests/unit_tests.cpp > CMakeFiles/unit_tests.dir/unit_tests.cpp.i
 
 tests/CMakeFiles/unit_tests.dir/unit_tests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/unit_tests.cpp.s"
-	cd /net/cremi/chapellegrini/ProjetTech/iug/tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /net/cremi/chapellegrini/ProjetTech/iug/tests/unit_tests.cpp -o CMakeFiles/unit_tests.dir/unit_tests.cpp.s
+	cd /net/cremi/chapellegrini/ProjetTech/iug/tests && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /net/cremi/chapellegrini/ProjetTech/iug/tests/unit_tests.cpp -o CMakeFiles/unit_tests.dir/unit_tests.cpp.s
 
 tests/CMakeFiles/unit_tests.dir/unit_tests.cpp.o.requires:
 
